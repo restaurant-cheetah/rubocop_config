@@ -1,0 +1,30 @@
+version: "2"
+plugins:
+  rubocop:
+    enabled: true
+    channel: rubocop-1-50-2
+    config:
+      file: .rubocop.yml
+    exclude_patterns:
+      - "vendor/"
+      - ".*/"
+      - "app/admin/"
+      - "bin/"
+      - "config/"
+      - "db/"
+      - "lib/scripts/"
+      - "proto/"
+      - "push_notification_test/"
+      - "spec/"
+exclude_patterns:
+  - "vendor/"
+  - ".*/"
+  - "app/admin/"
+  - "bin/"
+  - "config/"
+  - "db/"
+  - "lib/scripts/"
+  - "proto/"
+  - "push_notification_test/"
+  - "spec/"
+  - "scripts/"

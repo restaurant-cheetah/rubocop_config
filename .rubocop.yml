@@ -1,0 +1,45 @@
+inherit_gem:
+  rubocop-shopify: rubocop.yml
+
+AllCops:
+  Exclude:
+    - 'app/admin/**/*'
+    - 'db/**/*'
+    - 'bin/**/*'
+    - 'Rakefile'
+    - 'config/**/*'
+    - 'proto/**/*'
+    - 'lib/scripts/**/*'
+    - 'push_notification_test/*'
+    - 'spec/**/*'
+
+Style/MethodCallWithArgsParentheses:
+  AllowedMethods:
+    - require
+    - require_relative
+    - require_dependency
+    - yield
+    - raise
+    - puts
+    - error
+    - run
+    - to
+    - not_to
+    - to_not
+    - describe
+    - eql
+    - eq
+    - receive
+    - redirect_to
+    - render
+    - row
+    - shared_examples
+  Exclude:
+    - Gemfile
+    - app/admin/**/*
+
+Layout/CaseIndentation:
+  EnforcedStyle: case
+
+Layout/LineLength:
+  AllowedPatterns: ['\A#'] # Allow long comments (annotate gem might generates long comments)
