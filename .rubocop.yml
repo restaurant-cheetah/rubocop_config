@@ -7,11 +7,11 @@ require:
 AllCops:
   NewCops: enable
   TargetRubyVersion: 3.3.5
+  SuggestExtensions: false
   Exclude:
     - 'db/**/*'
     - 'bin/**/*'
     - 'tmp/**/*'
-    - 'config/**/*'
     - 'vendor/**/*'
     - 'db/schema.rb'
 
@@ -59,6 +59,10 @@ Layout/IndentationWidth:
 
 Layout/LeadingCommentSpace:
   Enabled: true
+
+Layout/LineLength:
+  Max: 140
+  AllowedPatterns: ['\A#'] # Allow long comments (annotate gem might generates long comments)
 
 Layout/SpaceAfterColon:
   Enabled: true
@@ -200,6 +204,11 @@ Style/AndOr:
 Style/ClassAndModuleChildren:
   EnforcedStyle: nested
 
+# Use `class << self` for class methods.
+Style/ClassMethodsDefinitions:
+  Enabled: true
+  EnforcedStyle: self_class
+
 # Prefer Foo.method over Foo::method
 Style/ColonMethodCall:
   Enabled: true
@@ -254,18 +263,17 @@ Style/StabbyLambdaParentheses:
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: double_quotes
-  Include:
-    - "app/**/*"
-    - "config/**/*"
-    - "lib/**/*"
-    - "test/**/*"
-    - "Gemfile"
 
 Style/TrailingCommaInArrayLiteral:
+  Enabled: true
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArguments:
   Enabled: true
 
 Style/TrailingCommaInHashLiteral:
   Enabled: true
+  EnforcedStyleForMultiline: comma
 
 Style/QuotedSymbols:
   EnforcedStyle: single_quotes

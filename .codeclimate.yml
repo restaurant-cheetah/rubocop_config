@@ -8,14 +8,3 @@ plugins:
     channel: rubocop-1-56-3
     config:
       file: .rubocop.yml
-
-exclude_patterns:
-  - "vendor/"
-  - ".*/"
-  - "bin/"
-  - "config/"
-  - "db/"
-  - "lib/"
-  - "app/lib/"
-  - "proto/"
-  - "spec/"
