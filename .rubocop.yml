@@ -43,3 +43,9 @@ Layout/CaseIndentation:
 
 Layout/LineLength:
   AllowedPatterns: ['\A#'] # Allow long comments (annotate gem might generates long comments)
+
+Lint/UselessAccessModifier:
+  ContextCreatingMethods:
+    - concerning
+    - class_methods
+    - included
