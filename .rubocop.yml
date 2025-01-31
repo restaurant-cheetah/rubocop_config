@@ -197,6 +197,9 @@ RSpec/MultipleMemoizedHelpers:
 RSpec/NestedGroups:
   Max: 7
 
+RSpec/NamedSubject:
+  Enabled: false
+
 # We generally prefer &&/|| but like low-precedence and/or in context
 Style/AndOr:
   Enabled: false
